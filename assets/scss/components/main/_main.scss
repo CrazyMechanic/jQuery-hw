@@ -1,0 +1,13 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+
+.form__name {
+  background-color: yellow;
+}
+
+.form__container {
+  @extend %container
+
+
+}

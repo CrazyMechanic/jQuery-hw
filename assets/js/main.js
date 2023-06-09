@@ -1,23 +1,27 @@
+function createMain() {
+  $('body').append('<main></main>');
+}
+
 function formContainer() {
-  $('body').append('<form class="form__container"><h1>Lorem ipsum dolor sit amet</h1></form>');
+  $('main').append('<form class="form__container"><h1>Lorem ipsum dolor sit amet</h1></form>');
 }
 
 function createFormName() {
-  $('.form__container').append('<div class="form__name"></div>');
+  $('.form__container').append('<div class="form form__name"></div>');
 
   $('.form__name').append('<label for="name">Name</label>' +
     '<input type="text" name="name" placeholder="Entry your name">');
 }
 
 function createFormPassword() {
-  $('.form__container').append('<div class="form__password"></div>');
+  $('.form__container').append('<div class="form form__password"></div>');
 
   $('.form__password').append('<label for="password">Password</label>' +
     '<input type="password" name="password" placeholder="Entry your password">');
 }
 
 function createFormEmail() {
-  $('.form__container').append('<div class="form__email"></div>');
+  $('.form__container').append('<div class="form form__email"></div>');
 
   $('.form__email').append('<label for="email">Email</label>' +
     '<input type="email" name="email" placeholder="Entry your email">');
@@ -77,6 +81,7 @@ function slideToggle() {
 }
 
 function initialise() {
+  createMain();
   formContainer();
   createFormName();
   createFormPassword();

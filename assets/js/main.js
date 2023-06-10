@@ -3,7 +3,7 @@ function createMain() {
 }
 
 function formContainer() {
-  $('main').append('<form class="form__container"><h1>Lorem ipsum dolor sit amet</h1></form>');
+  $('main').append('<form class="form__container"><h1>Page element example - form</h1></form>');
 }
 
 function createFormName() {
@@ -28,9 +28,11 @@ function createFormEmail() {
 }
 
 function createFormBtn() {
-  $('.form__container').append('<p>You need to agree with policy privacy, to save form</p>' +
-    '<button id="submit" type="submit" disabled>Save</button>')
-    .append('<button type="reset">Reset</button>');
+  $('.form__container').append('<div class="form__btn-container"></div>');
+
+  $('.form__btn-container').append('<p class="form__btn-alert">You need to agree with policy privacy, to save form</p>' +
+    '<button class="form__btn" id="submit" type="submit" disabled>Save</button>')
+    .append('<button class="form__btn" type="reset">Reset</button>');
 }
 
 function appendPrivacyPolicy() {

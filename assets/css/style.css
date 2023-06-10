@@ -172,6 +172,8 @@ template {
   margin-inline: auto;
 }
 body {
+  overflow-y: scroll;
+
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -183,6 +185,108 @@ li {
   list-style-type: none;
 }
 
-.form__name {
-  background-color: yellow;
+label,
+input {
+  display: block;
+}
+
+.form__btn {
+  width: 130px;
+  height: 30px;
+
+  border-radius: 6px;
+  -webkit-box-shadow: -3px 3px 20px -10px black;
+          box-shadow: -3px 3px 20px -10px black;
+}
+.form__btn:first-of-type {
+  margin-left: 70px;
+}
+.form__btn:last-of-type {
+  margin-left: 20px;
+}
+.form__btn-alert {
+  padding-left: 35px;
+
+  color: #d53d27;
+}
+.form__privacy-main {
+  width: 410px;
+  height: 40px;
+  margin-left: 10px;
+  padding-top: 6px;
+
+  cursor: pointer;
+  text-align: center;
+
+  border: 2px solid black;
+  border-radius: 6px;
+  -webkit-box-shadow: -3px 3px 20px -10px black;
+          box-shadow: -3px 3px 20px -10px black;
+}
+.form__privacy-content {
+  padding-top: 5px;
+}
+
+.form__container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 10px 0;
+
+  border-radius: 6px;
+  background-color: #eeeeee;
+}
+.form__container label,
+.form__container input {
+  display: block;
+
+  margin: 10px;
+}
+.form__container label {
+  padding-left: 2px;
+}
+.form__container input {
+  width: 400px;
+  height: 30px;
+  padding-left: 10px;
+
+  border-radius: 6px;
+  -webkit-box-shadow: -3px 3px 20px -10px black;
+          box-shadow: -3px 3px 20px -10px black;
+}
+.form__container h1 {
+  text-align: center;
+}
+
+.navigate {
+  height: 80px;
+
+  background-color: rgba(106, 106, 106, 0.44);
+}
+.navigate__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  padding: 20px 0;
+
+  gap: 60px;
+}
+.navigate__item {
+  padding: 10px;
+
+  cursor: pointer;
+
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-radius: 6px;
+}
+.navigate__item::before {
+  width: 10px;
+  height: 10px;
+
+  background-color: black;
 }

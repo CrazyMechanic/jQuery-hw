@@ -2,12 +2,113 @@
 @use "../../mixins" as *;
 
 
-.form__name {
-  background-color: yellow;
+.form {
+  //background-color: yellow;
+
+  &__btn {
+    width: 130px;
+    height: 30px;
+    border-radius: 6px;
+
+    @include box-shadow;
+
+
+    &:first-of-type {
+      margin-left: 70px;
+    }
+
+    &:last-of-type {
+      margin-left: 20px;
+    }
+
+    &-container {
+
+    }
+
+    &-alert {
+      //display: block;
+      color: #d53d27;
+      padding-left: 35px;
+    }
+  }
+
+  &__privacy {
+    &-main {
+      cursor: pointer;
+      border: 2px solid black;
+      border-radius: 6px;
+      width: 410px;
+      height: 40px;
+      margin-left: 10px;
+      padding-top: 6px;
+      text-align: center;
+
+      @include box-shadow
+    }
+
+    &-content {
+      padding-top: 5px;
+    }
+  }
+
 }
 
 .form__container {
-  @extend %container
+  background-color: #eeeeee;
+  border-radius: 6px;
+  margin-top: $gap-x2;
+  margin-bottom: $gap-x2;
+  padding: 10px 0;
+  @extend %container;
 
+  & label,
+  & input {
+    display: block;
+    margin: 10px;
+  }
 
+  & label {
+    padding-left: 2px;
+  }
+
+  & input {
+    width: 400px;
+    height: 30px;
+    border-radius: 6px;
+    padding-left: 10px;
+    //text-align: center;
+    @include box-shadow
+  }
+
+  & h1 {
+    text-align: center;
+  }
+}
+
+.navigate {
+  height: 80px;
+  background-color: rgba(106, 106, 106, 0.44);
+
+  &__list {
+    display: flex;
+    gap: $gap-x3;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  &__item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-radius: 6px;
+
+    &::before {
+      //border: 1px solid black;
+      height: 10px;
+      width: 10px;
+      background-color: black;
+    }
+  }
 }
